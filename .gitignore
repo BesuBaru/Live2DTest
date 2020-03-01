@@ -84,3 +84,6 @@ DerivedDataCache/*
 !/Plugins/UnrealLive2D/Source/ThirdParty/CubismLibrary/lib/*
 !/Plugins/UnrealLive2D/Source/ThirdParty/CubismLibrary/lib/**/*
 
+# Cubism Core
+/Plugins/UnrealLive2D/Source/ThirdParty/CubismLibrary/Core
+

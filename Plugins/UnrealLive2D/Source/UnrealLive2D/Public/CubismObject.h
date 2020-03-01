@@ -59,7 +59,7 @@ private:
 
 public:
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cubism|Update")
-    int32 TickRate = 30;
+    int32 TickRate = 60;
 
 private:
 	float _TimeSeconds = 0.0f;
