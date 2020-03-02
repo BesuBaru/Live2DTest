@@ -3,15 +3,16 @@
 	"Version": 1,
 	"VersionName": "1.0.0",
 	"FriendlyName": "UnrealLive2D",
-	"Description": "",
+	"Description": "Unreal Engine plugin for Live2D models.",
 	"Category": "Other",
 	"CreatedBy": "Naru",
 	"CreatedByURL": "",
 	"DocsURL": "",
 	"MarketplaceURL": "",
-	"SupportURL": "",
+	"SupportURL": "https://github.com/Arisego/UnrealLive2D",
 	"CanContainContent": true,
 	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
 	"Installed": false,
 	"Modules": [
 		{
