@@ -52,7 +52,7 @@ extern TGlobalResource<FCubismVertexBuffer> GCubismVertexScreenBuffer;
 //////////////////////////////////////////////////////////////////////////
 struct FCubismRenderState;
 
-struct FModelRenders 
+struct FModelRenders
 {
     static void SetUpBlendMode(
         Csm::CubismModel* tp_Model,
@@ -87,6 +87,7 @@ struct FModelRenders
         struct FCubismRenderState* tp_States
     );
 
+    //////////////////////////////////////////////////////////////////////////
     /** Masked Drawable Draw */
     static void DrawSepMask(
         FTextureRenderTargetResource* OutTextureRenderTargetResource,
@@ -97,6 +98,25 @@ struct FModelRenders
         class CubismClippingContext* clipContext
     );
 
+    static void _DrawSepMask_Normal(
+        FTextureRenderTargetResource* OutTextureRenderTargetResource,
+        FRHICommandListImmediate& RHICmdList, ERHIFeatureLevel::Type FeatureLevel,
+        Csm::CubismModel* tp_Model,
+        const Csm::csmInt32 drawableIndex,
+        FCubismRenderState* tp_States,
+        class CubismClippingContext* clipContext
+    );
+
+    static void _DrawSepMask_Invert(
+        FTextureRenderTargetResource* OutTextureRenderTargetResource,
+        FRHICommandListImmediate& RHICmdList, ERHIFeatureLevel::Type FeatureLevel,
+        Csm::CubismModel* tp_Model,
+        const Csm::csmInt32 drawableIndex,
+        FCubismRenderState* tp_States,
+        class CubismClippingContext* clipContext
+    );
+
+    //////////////////////////////////////////////////////////////////////////
     /** Render Mask to buffer, low precise version */
     static void RenderMask_Full(
         FCubismRenderState* tp_States,
@@ -124,4 +144,3 @@ struct FModelRenders
     );
 
 };
-

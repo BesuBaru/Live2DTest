@@ -14,7 +14,6 @@
 
 
 //////////////////////////////////////////////////////////////////////////
-
 class FCubismSepShader : public FGlobalShader
 {
 public:
@@ -143,7 +142,7 @@ void FModelRenders::DrawSepNormal(
     }
 
     const csmInt32 indexCount = tp_Model->GetDrawableVertexIndexCount(drawableIndex);
-    check(indexCount > 0&& "Bad Index Count");
+    check(indexCount > 0 && "Bad Index Count");
 
     FRHITexture2D* RenderTargetTexture = OutTextureRenderTargetResource->GetRenderTargetTexture();
     RHICmdList.TransitionResource(EResourceTransitionAccess::EWritable, RenderTargetTexture);
@@ -206,7 +205,6 @@ void FModelRenders::DrawSepNormal(
 
 
         RHICmdList.SetStreamSource(0, ScratchVertexBufferRHI, 0);
-        RHICmdList.DrawIndexedPrimitive(IndexBufferRHI, 0, 0, 4, 0, 2, 1);
 
         RHICmdList.DrawIndexedPrimitive(
             IndexBufferRHI,
@@ -278,4 +276,3 @@ void FModelRenders::DrawTestTexture(FTextureRenderTargetResource* OutTextureRend
     }
     RHICmdList.EndRenderPass();
 }
-

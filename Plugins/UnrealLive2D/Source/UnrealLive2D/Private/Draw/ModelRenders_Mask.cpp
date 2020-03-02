@@ -138,10 +138,10 @@ void FillMaskParameter(CubismClippingContext* clipContext, CubismClippingManager
 }
 
 void FModelRenders::RenderMask_Full(
-    FCubismRenderState* tp_States, 
-    FRHICommandListImmediate& RHICmdList, 
-    CubismClippingManager_UE* _clippingManager, 
-    ERHIFeatureLevel::Type FeatureLevel, 
+    FCubismRenderState* tp_States,
+    FRHICommandListImmediate& RHICmdList,
+    CubismClippingManager_UE* _clippingManager,
+    ERHIFeatureLevel::Type FeatureLevel,
     Csm::CubismModel* tp_Model
 )
 {
@@ -259,7 +259,6 @@ void FModelRenders::RenderMask_Full(
                 ////////////////////////////////////////////////////////////////////////////
 
                 RHICmdList.SetStreamSource(0, ScratchVertexBufferRHI, 0);
-                RHICmdList.DrawIndexedPrimitive(IndexBufferRHI, 0, 0, 4, 0, 2, 1);
 
                 RHICmdList.DrawIndexedPrimitive(
                     IndexBufferRHI,
@@ -289,10 +288,10 @@ void FModelRenders::RenderMask_Full(
 }
 
 void FModelRenders::RenderMask_Single(
-    FCubismRenderState* tp_States, 
-    FRHICommandListImmediate& RHICmdList, 
-    ERHIFeatureLevel::Type FeatureLevel, 
-    Csm::CubismModel* tp_Model, 
+    FCubismRenderState* tp_States,
+    FRHICommandListImmediate& RHICmdList,
+    ERHIFeatureLevel::Type FeatureLevel,
+    Csm::CubismModel* tp_Model,
     class CubismClippingContext* clipContext
 )
 {
@@ -403,7 +402,6 @@ void FModelRenders::RenderMask_Single(
             ////////////////////////////////////////////////////////////////////////////
 
             RHICmdList.SetStreamSource(0, ScratchVertexBufferRHI, 0);
-            RHICmdList.DrawIndexedPrimitive(IndexBufferRHI, 0, 0, 4, 0, 2, 1);
 
             RHICmdList.DrawIndexedPrimitive(
                 IndexBufferRHI,
