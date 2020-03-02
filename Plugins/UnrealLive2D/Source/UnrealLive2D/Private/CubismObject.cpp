@@ -35,7 +35,8 @@ void UCubismObject::Tick(float DeltaTime)
 		return;
 	}
 
-	const float tf_UpdateDelta = ((TickRate > 0) ? (DeltaTime) : 0.05f);
+	const float tf_UpdateDelta = (DeltaTime);
+	//((TickRate > 0) ? (DeltaTime) : 0.05f)
 	//(1.0f / TickRate)
 
     if (msp_RawModel.IsValid()&& IsValid(TargetRender))
