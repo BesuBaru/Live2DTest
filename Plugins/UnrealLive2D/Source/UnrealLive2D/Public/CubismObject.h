@@ -8,6 +8,7 @@
 #include "Templates/SharedPointer.h"
 #include "Components/ActorComponent.h"
 #include "Draw/CubismConfig.h"
+#include "CubismUeTypes.h"
 #include "CubismObject.generated.h"
 
 class UCubismDrawAble;
@@ -58,8 +59,8 @@ private:
     TSharedPtr<struct FCubismSepRender> msp_Render;
 
 public:
-    //UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cubism|Update");
-    //int32 TickRate = 60;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cubism|Update")
+    int32 TickRate = 30;
 
 private:
 	float _TimeSeconds = 0.0f;
@@ -69,5 +70,21 @@ private:
     bool _bPauseUpdate = false;
 
 	//////////////////////////////////////////////////////////////////////////
+public:
+    /** Event called while motion play ends */
+    UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
+    void OnMotionPlayeEnd();
 
+    UFUNCTION(BlueprintCallable)
+    bool OnTap(const FVector2D& InPos);
+
+    /**
+     * Motion control
+     *
+     * @param InName Group name of motion
+     * @param InNo Group number of motion
+     * @param InPriority Priori of motion to play
+     */
+    UFUNCTION(BlueprintCallable)
+    void PlayMotion(const FString& InName, const int32 InNo, const EMotionPriority InPriority = EMotionPriority::EMP_Normal);
 };

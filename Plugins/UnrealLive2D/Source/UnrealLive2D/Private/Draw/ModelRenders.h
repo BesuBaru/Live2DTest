@@ -52,7 +52,7 @@ extern TGlobalResource<FCubismVertexBuffer> GCubismVertexScreenBuffer;
 //////////////////////////////////////////////////////////////////////////
 struct FCubismRenderState;
 
-struct FModelRenders
+struct FModelRenders 
 {
     static void SetUpBlendMode(
         Csm::CubismModel* tp_Model,
@@ -144,3 +144,4 @@ struct FModelRenders
     );
 
 };
+
